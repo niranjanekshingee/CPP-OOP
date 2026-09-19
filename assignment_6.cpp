@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+private:
+    string name;
+    int id;
+
+public:
+    // Constructor
+    Employee(string n, int i)
+    {
+        name = n;
+        id = i;
+        cout << "Employee record created." << endl;
+    }
+
+    void display()
+    {
+        cout << "Employee Name: " << name << endl;
+        cout << "Employee ID: " << id << endl;
+    }
+
+    // Destructor
+    ~Employee()
+    {
+        cout << "Employee record removed from memory." << endl;
+    }
+};
+
+int main()
+{
+    Employee e1("Niranjan", 101);
+
+    e1.display();
+
+    return 0;
+}
